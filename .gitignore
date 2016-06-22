@@ -2,54 +2,51 @@
 # core examples
 #########################
 
-*/*/bin/*
-!*/*/bin/data/
+bin/*
+!bin/data/
 
 #########################
 # IDE
 #########################
 
 # XCode
-/*/*/*.xcodeproj
-/*/*/Project.xcconfig
-/*/*/openFrameworks-Info.plist
-/*/*/ofxiOS-Info.plist
-/*/*/ofxiOS_Prefix.pch
-/*/*/*/*/Default*.png
-/*/*/*/*/Icon*.png
+*.xcodeproj
+Project.xcconfig
+openFrameworks-Info.plist
+ofxiOS-Info.plist
+ofxiOS_Prefix.pch
+Default*.png
+Icon*.png
 
 # Code::Blocks
-/*/*/*.cbp
-/*/*/*.workspace
+*.cbp
+*.workspace
 
 # Visual Studio
-/*/*/*.sln
-/*/*/*.vcxproj
-/*/*/*.vcxproj.user
-/*/*/*.vcxproj.filters
-/*/*/icon.rc
+*.sln
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+icon.rc
 
 # Eclipse
-/*/*/.cproject
-/*/*/.project
-/*/*/.settings/
+.cproject
+.project
+.settings/
 
 # QtCreator
-/*/*/*.qbs
-/*/*/*.qbs.user
-/*/*/*.pro
-/*/*/*.pro.user
+*.qbs
+*.qbs.user
+*.pro
+*.pro.user
 
 #########################
 # operating system
 #########################
 
 # Linux
-/*/*/Makefile
-/*/*/config.make
-# Leave Android files in until project generation works
-!/android/*/Makefile
-!/android/*/config.make
+Makefile
+config.make
 
 # Android
 android/*/test link
@@ -66,3 +63,15 @@ Android.mk
 !android/*/.project
 !android/*/.settings
 !android/*/.settings/*
+
+#########################
+# extra
+#########################
+*.so
+*.o
+*.bg
+*.bg.lock
+bin/*.
+
+*.bin
+*.csv
