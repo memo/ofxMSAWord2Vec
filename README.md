@@ -4,7 +4,7 @@ A C++ openFrameworks addon to load and play with word vector embeddings (mapping
 
 The C++ openFrameworks code does not do word vector *training*, it only loads pretrained models in a binary or csv format. There is python code for training in the ./py folder. 
 
-The binary file format is the one used by Mikolov et al at https://code.google.com/archive/p/word2vec/ and the models are based on "Efficient Estimation of Word Representations in Vector Space" (http://arxiv.org/pdf/1301.3781.pdf)
+The binary file format is the one used by [Mikolov et al](https://code.google.com/archive/p/word2vec/) and the models are based on [Efficient Estimation of Word Representations in Vector Space](http://arxiv.org/pdf/1301.3781.pdf).
 
 See bottom of README for more info and tutorials on word2vec.
 
@@ -14,24 +14,24 @@ Download the pretrained models from the [releases tab](https://github.com/memo/o
 ###openFrameworks
 	msa::Word2Vec word2vec;
 	// load binary file (as opposed to csv, which is much slower to load)
-	word2vec.load_bin('path/to/model.bin');
+	word2vec.load_bin("path/to/model.bin");
 
 	// return sorted list of 10 closest words to 'kitten' (and their similarities)
-	ret = word2vec.find_closest_words('kitten', 10);
+	ret = word2vec.find_closest_words("kitten", 10);
 	// returns: [[1 kitten], [0.78 puppy], [0.77 kittens], [0.75 cat], [0.74 pup], [0.72 puppies], [0.67 dog], [0.66 tabby], [0.65 chihuahua], [0.65 cats]]
 
 
 	// perform vector arithmetic on words
 
 	// get vectors for words...
-	vking = word2vec.word_vector('king');
-	vman = word2vec.word_vector('man');
-	vwoman = word2vec.word_vector('woman');
+	vking = word2vec.word_vector("king");
+	vman = word2vec.word_vector("man");
+	vwoman = word2vec.word_vector("woman");
 
-	// get resulting vector for 'king' - 'man' + 'woman'
+	// get resulting vector for "king" - "man" + "woman"
 	v = msa::vector_utils::add(msa::vector_utils::subtract(vking, vman), vwoman);
 
-	// find closest words to resulting vector. top result is 'queen'
+	// find closest words to resulting vector. top result is "queen"
 	ret = word2vec.find_closest_words(v);
 
 More 3-way analogies can be found in the paper [Linguistic Regularities in Continuous Space Word Representations. Mikolov et al. 2013](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/rvecs.pdf)
@@ -101,12 +101,11 @@ This is work-in-progress, made as part of a residency at Google's [Artists and M
 Currently two twitter bots are using this as a testbed: [Word of Math](https://twitter.com/wordofmath) and [Almost Inspire](https://twitter.com/almost_inspire). More releases in the pipeline. 
 
 ##References
-**tutorials and background info on word2vec:**
+**tutorials and more info on word2vec:**
 
 - https://code.google.com/archive/p/word2vec/
 - http://deeplearning4j.org/word2vec
-- http://www.offconvex.org/2015/12/12/word-embeddings-1/
-- http://www.offconvex.org/2016/02/14/word-embeddings-2/
+- http://www.offconvex.org/2015/12/12/word-embeddings-1/, http://www.offconvex.org/2016/02/14/word-embeddings-2/
 - http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/
 - http://rare-technologies.com/word2vec-tutorial/
 - https://www.tensorflow.org/versions/master/tutorials/word2vec/index.html
@@ -114,7 +113,7 @@ Currently two twitter bots are using this as a testbed: [Word of Math](https://t
 **papers:**
 
 - [Efficient Estimation of Word Representations in Vector Space. Mikolov et al. 2013](http://arxiv.org/pdf/1301.3781.pdf)
-- [Distributed Representations of Words and Phrases and their - Compositionality. Mikolov et al. 2013](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)
+- [Distributed Representations of Words and Phrases and their Compositionality. Mikolov et al. 2013](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)
 - [Linguistic Regularities in Continuous Space Word Representations. Mikolov et al. 2013](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/rvecs.pdf)
 
 **related / more recent:**
