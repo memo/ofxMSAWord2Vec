@@ -71,8 +71,11 @@ Android.mk
 *.o
 *.bg
 *.bg.lock
-bin/*.
+*/bin/*.
+example/bin/*.
+example/bin/example*
 
 *.bin
 *.csv
+
 *.pyc
