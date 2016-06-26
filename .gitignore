@@ -75,3 +75,4 @@ bin/*.
 
 *.bin
 *.csv
+*.pyc
