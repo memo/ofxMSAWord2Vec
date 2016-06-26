@@ -37,17 +37,18 @@ Download the pretrained models from the [releases tab](https://github.com/memo/o
 More 3-way analogies can be found in the paper [Linguistic Regularities in Continuous Space Word Representations. Mikolov et al. 2013](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/rvecs.pdf)
 and nice explanation / tutorial at http://deeplearning4j.org/word2vec
 
-There are also interesting two-way operations, e.g. (I selected interesting results from top 5)
-twitter + bot = memes (seriously!)
-human - god = animal
-nature - god = dynamics
-science + god = mankind, metaphysics,
-human - love = animal
-sex - love = intercourse, prostitution, masturbation, rape
-love - sex = adore
-love - passion = ugh, what'd
+There are also interesting two-way operations, e.g. (I selected interesting results from top 5):
 
-I made a twitter bot that is randomly exploring this space [Word of Math](https://twitter.com/wordofmath) 
+- twitter + bot = memes (seriously!)
+- human - god = animal
+- nature - god = dynamics
+- science + god = mankind, metaphysics,
+- human - love = animal
+- sex - love = intercourse, prostitution, masturbation, rape
+- love - sex = adore
+- love - passion = ugh, what'd
+
+I made a twitter bot that's randomly exploring this space [Word of Math](https://twitter.com/wordofmath) 
 
 ###Python
 Similar to above, but a lot more functionality, e.g. to find correct capitalization of word in model, trim words, perform intersections between two lists etc. I didn't port these to C++/openFrameworks because: 1.) it's way easier in python. 2.) the idea is you trim and prepare the model in python, then load the prepped model in C++. See ./py for examples.
@@ -101,21 +102,25 @@ Currently two twitter bots are using this as a testbed: [Word of Math](https://t
 
 ##References
 **tutorials and background info on word2vec:**
-https://code.google.com/archive/p/word2vec/
-http://www.offconvex.org/2015/12/12/word-embeddings-1/
-http://www.offconvex.org/2016/02/14/word-embeddings-2/
-http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/
-http://rare-technologies.com/word2vec-tutorial/
-https://www.tensorflow.org/versions/master/tutorials/word2vec/index.html
+
+- https://code.google.com/archive/p/word2vec/
+- http://deeplearning4j.org/word2vec
+- http://www.offconvex.org/2015/12/12/word-embeddings-1/
+- http://www.offconvex.org/2016/02/14/word-embeddings-2/
+- http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/
+- http://rare-technologies.com/word2vec-tutorial/
+- https://www.tensorflow.org/versions/master/tutorials/word2vec/index.html
 
 **papers:**
-[Efficient Estimation of Word Representations in Vector Space. Mikolov et al. 2013](http://arxiv.org/pdf/1301.3781.pdf)
-[Distributed Representations of Words and Phrases and their Compositionality. Mikolov et al. 2013](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)
-[Linguistic Regularities in Continuous Space Word Representations. Mikolov et al. 2013](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/rvecs.pdf)
+
+- [Efficient Estimation of Word Representations in Vector Space. Mikolov et al. 2013](http://arxiv.org/pdf/1301.3781.pdf)
+- [Distributed Representations of Words and Phrases and their - Compositionality. Mikolov et al. 2013](http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)
+- [Linguistic Regularities in Continuous Space Word Representations. Mikolov et al. 2013](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/rvecs.pdf)
 
 **related / more recent:**
-[GloVe: Global Vectors for Word Representation. Pennington et al. 2014](http://www-nlp.stanford.edu/pubs/glove.pdf)
-[Distributed Representations of Sentences and Documents. Le at al. 2014](http://www.jmlr.org/proceedings/papers/v32/le14.pdf)
-[Skip Thought Vectors. Kiros et al. 2015](http://papers.nips.cc/paper/5950-skip-thought-vectors.pdf)
-[Deep Visual-Semantic Alignments for Generating Image Descriptions. Karpathy et al. 2015](http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Karpathy_Deep_Visual-Semantic_Alignments_2015_CVPR_paper.pdf)
+
+- [GloVe: Global Vectors for Word Representation. Pennington et al. 2014](http://www-nlp.stanford.edu/pubs/glove.pdf)
+- [Distributed Representations of Sentences and Documents. Le at al. 2014](http://www.jmlr.org/proceedings/papers/v32/le14.pdf)
+- [Skip Thought Vectors. Kiros et al. 2015](http://papers.nips.cc/paper/5950-skip-thought-vectors.pdf)
+- [Deep Visual-Semantic Alignments for Generating Image Descriptions. Karpathy et al. 2015](http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Karpathy_Deep_Visual-Semantic_Alignments_2015_CVPR_paper.pdf)
 
