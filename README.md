@@ -120,6 +120,7 @@ Currently two twitter bots are using this as a testbed: [Word of Math](https://t
 
 - [GloVe: Global Vectors for Word Representation. Pennington et al. 2014](http://www-nlp.stanford.edu/pubs/glove.pdf)
 - [Distributed Representations of Sentences and Documents. Le at al. 2014](http://www.jmlr.org/proceedings/papers/v32/le14.pdf)
+- [Unsupervised Learning of Word Semantic Embedding using the Deep Structured Semantic Model. Song et al. 2014](http://www.aclweb.org/anthology/N13-1090)
 - [Skip Thought Vectors. Kiros et al. 2015](http://papers.nips.cc/paper/5950-skip-thought-vectors.pdf)
 - [Deep Visual-Semantic Alignments for Generating Image Descriptions. Karpathy et al. 2015](http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Karpathy_Deep_Visual-Semantic_Alignments_2015_CVPR_paper.pdf)
 
