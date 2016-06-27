@@ -422,6 +422,7 @@ def do_word_maths(vecs, vecs_norm, word_op_pairs, top_k=10, dist_mode=0, cutoff=
     word_vecs_keys = vecs.keys()
     word_vecs_keys_lc = map(str.lower, word_vecs_keys)
     
+    # TODO fix this, comparison to None gives warning, use type
     v_sum = None 
     for ow in word_op_pairs:
         o = ow[0]
@@ -433,7 +434,7 @@ def do_word_maths(vecs, vecs_norm, word_op_pairs, top_k=10, dist_mode=0, cutoff=
             return None
         
         
-        if v_sum == None:
+        if type(v_sum) != np.ndarray:
             v_sum = o * v
         else:
             v_sum += o * v
@@ -500,7 +501,7 @@ def phrase_shift(word_vecs,
     # iterate all words
     for word in words:
         # get nearest words (this returns tuples iincluding words and their distances)
-        alt_words = find_closest_words(word_vecs, word, offset_rand_end, dist_mode)
+        alt_words = find_closest_words(word_vecs, word, offset_rand_end, dist_mode, cutoff=0)
         
         # extract words (i.e. get rid of distances), and convert to lowercase        
         alt_words = [w[0].lower() for w in alt_words]
